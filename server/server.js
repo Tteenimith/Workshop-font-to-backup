@@ -10,6 +10,7 @@ const notFound = require("./middlewares/not-found")
 //Route
 const authRouter = require('./routes/auth')
 const memberRouter = require("./routes/member")
+const landmarkRouter = require("./routes/landmark")
 
 //Step 3 middleware
 app.use(morgan('dev'))
@@ -21,6 +22,7 @@ readdirSync("./routes")
 
 app.use('/api',authRouter)
 app.use('/api',memberRouter)
+app.use('/api',landmarkRouter)
 
 
 

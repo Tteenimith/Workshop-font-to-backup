@@ -42,13 +42,12 @@ const AdminSidebar = () => {
           </span>
           Manage User
         </Link>
-
-        {/* <Link className={classLink} to="/admin/landmark">
+        <Link className={classLink} to="/admin/mapcontent">
           <span className="text-xl">
-            <FaMapMarkedAlt />
+            <MdManageAccounts />
           </span>
-          Landmark
-        </Link> */}
+          Map
+        </Link>
 
         <Link className={classLink} to={"#"}>
           <span className="text-xl">

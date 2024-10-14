@@ -13,6 +13,7 @@ import HomeUser from "../pages/user/HomeUser";
 import Unauthorization from "../pages/Unauthorization";
 import PageNotFound from "../pages/PageNotFound";
 import ProtectRoute from "./ProtectRoute";
+import MapContent from "../pages/admin/MapContent";
 
 const router = createBrowserRouter([
   {
@@ -34,13 +35,14 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <DashBoard /> },
       { path: "manage", element: <Manage /> },
+      { path: "mapcontent", element: <MapContent /> },
     ],
   },
 
   {
     path: "/user",
     element: <ProtectRoute element={<UserLayout />} allow={["ADMIN","USER"]} />   ,
-    children: [{ index: true, element: <HomeUser /> }],
+    children: [{ index: true, element: <HomSeUser /> }],
   },
 ]);
 
